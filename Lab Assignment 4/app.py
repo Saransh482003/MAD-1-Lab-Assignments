@@ -101,4 +101,4 @@ def viewer(student_id):
     return render_template("view.html",student=stu,enroll=enroll)
 
 if __name__=="__main__":
-    app.run(debug=True)
+    app.run()
