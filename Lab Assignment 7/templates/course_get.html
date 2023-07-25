@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Details</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Course Details</h1>
+    <table id = "course-detail">
+        <thead>
+            <tr>
+                <th>Course Code</th>
+                <th>Course Name</th>
+                <th>Course Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{course.course_code}}</td>
+                <td>{{course.course_name}}</td>
+                <td>{{course.course_description}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <h1 style="text-align: center;">Enrollment list</h1>
+    <table id = "course-table">
+        <thead>
+            <tr>
+                <th>SNo</th>
+                <th>Roll Number</th>
+                <th>Student First Name</th>
+                <th>Student Last Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in studentList %}
+                <tr>
+                    <td>{{loop.index}}</td>        
+                    <td>{{student.roll_number}}</td>
+                    <td>{{student.first_name}}</td>
+                    <td>{{student.last_name}}</td>
+                </tr>
+            {% endfor %}
+            
+        </tbody>
+    </table>
+    <a href="/courses">Go Back</a>
+</body>
+</html>
